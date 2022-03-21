@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RepositoryType>git</RepositoryType>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<PackageId>Jmcarrasc0.Mail.Sending</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Juan Carrasco</Authors>
+		<Company>Jmcarrasc0</Company>
+		<Description>
+			Package for mailing, including with copy, blind copy, files and html body
+			Paquete para el envio de correos, incluye con copia, copia oculta, archivos y cuerpo html
+		</Description>
+		<Copyright>jmcarrasc0 All rights reserved.</Copyright>
+		<PackageProjectUrl>https://github.com/jmcarrasc0/Mail.Sending</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/jmcarrasc0/Mail.Sending</RepositoryUrl>
+		<PackageReleaseNotes>Compilacion inicial</PackageReleaseNotes>
+	</PropertyGroup>
+</Project>
