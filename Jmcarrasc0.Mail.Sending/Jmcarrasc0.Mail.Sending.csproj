@@ -18,5 +18,6 @@
 		<PackageProjectUrl>https://github.com/jmcarrasc0/Mail.Sending</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jmcarrasc0/Mail.Sending</RepositoryUrl>
 		<PackageReleaseNotes>Compilacion inicial</PackageReleaseNotes>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 </Project>
