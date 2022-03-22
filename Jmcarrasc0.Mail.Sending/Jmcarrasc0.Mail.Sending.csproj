@@ -7,17 +7,37 @@
 		<RepositoryType>git</RepositoryType>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<PackageId>Jmcarrasc0.Mail.Sending</PackageId>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Authors>Juan Carrasco</Authors>
 		<Company>Jmcarrasc0</Company>
-		<Description>
-			Package for mailing, including with copy, blind copy, files and html body
-			Paquete para el envio de correos, incluye con copia, copia oculta, archivos y cuerpo html
+		<Description>Package for mailing, including with copy, blind copy, files and html body
+Paquete para el envio de correos, incluye con copia, copia oculta, archivos y cuerpo html
 		</Description>
 		<Copyright>jmcarrasc0 All rights reserved.</Copyright>
 		<PackageProjectUrl>https://github.com/jmcarrasc0/Mail.Sending</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jmcarrasc0/Mail.Sending</RepositoryUrl>
-		<PackageReleaseNotes>Compilacion inicial</PackageReleaseNotes>
+		<PackageReleaseNotes>Ajustes de texto</PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<ApplicationIcon>logonuget.ico</ApplicationIcon>
+		<PackageIcon>logonuget.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>Mail, Correo, MailSending, Services, Mail Relay, Mail SMTP, Relay, SMPT, Email, Email Host, Email Relay</PackageTags>
+		<AssemblyVersion>1.0.1</AssemblyVersion>
+		<FileVersion>1.0.1</FileVersion>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="logonuget.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="C:\Users\j_mca\Pictures\jmcarrasc0\logonuget.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 </Project>
