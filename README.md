@@ -1,6 +1,6 @@
-# [Jmcarrasc0 - Mail.Sending](https://www.patreon.com/jmcarrasc0)
+# [Jmcarrasc0 - Mail.Sending](https://www.patreon.com/join/jmcarrasc0?)
 
-<a href="https://www.patreon.com/jmcarrasc0"><img src="https://i.postimg.cc/hPcgmRWQ/jmcarrasc0-logo.png" alt="jmcarrasco logo" ></a>
+<a href="https://www.patreon.com/join/jmcarrasc0?"><img src="https://i.postimg.cc/hPcgmRWQ/jmcarrasc0-logo.png" alt="jmcarrasco logo" ></a>
 
 **Mail.Sending** is a nuget package based on **.NET** for sending mail through an Smtp server with the SMTP Relay function or with user and password authentication..
 
