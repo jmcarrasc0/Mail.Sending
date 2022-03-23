@@ -12,7 +12,7 @@ Mail.Sending is constantly in development! Try it out now:
 ### NuGet
 
 ```sh
-PM> Install-Package Jmcarrasc0.Mail.Sending -Version 1.0.0
+PM> Install-Package Jmcarrasc0.Mail.Sending -Version 1.1.0
 ```
 
 **or**
@@ -20,34 +20,34 @@ PM> Install-Package Jmcarrasc0.Mail.Sending -Version 1.0.0
 ### .NET CLI
 
 ```sh
-> dotnet add package Jmcarrasc0.Mail.Sending --version 1.0.0
+> dotnet add package Jmcarrasc0.Mail.Sending --version 1.1.0
 ```
 
 ### PackageReference
 
 ```sh
-<PackageReference Include="Jmcarrasc0.Mail.Sending" Version="1.0.0" />
+<PackageReference Include="Jmcarrasc0.Mail.Sending" Version="1.1.0" />
 ```
 ### Paket CLI
 
 ```sh
-> paket add Jmcarrasc0.Mail.Sending --version 1.0.0
+> paket add Jmcarrasc0.Mail.Sending --version 1.1.0
 ```
 
 ### Script & Interactive
 
 ```sh
-> #r "nuget: Jmcarrasc0.Mail.Sending, 1.0.0"
+> #r "nuget: Jmcarrasc0.Mail.Sending, 1.1.0"
 ```
 
 ### Cake
 
 ```sh
 // Install Jmcarrasc0.Mail.Sending as a Cake Addin
-#addin nuget:?package=Jmcarrasc0.Mail.Sending&version=1.0.0
+#addin nuget:?package=Jmcarrasc0.Mail.Sending&version=1.1.0
 
 // Install Jmcarrasc0.Mail.Sending as a Cake Tool
-#tool nuget:?package=Jmcarrasc0.Mail.Sending&version=1.0.0
+#tool nuget:?package=Jmcarrasc0.Mail.Sending&version=1.1.0
 ```
 
 <br>
@@ -73,19 +73,19 @@ var mail = new Mail();
         IsSSL = "true or false",
         Port = "Default communication port 25",
         Addressees = new List<Addressee>() {
-            new Recipient() {
+            new Addressee() {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
         },
-        RecipientsCC = new List<Receiver>() {
-            new Recipient() {
+        AddresseesCC = new List<Receiver>() {
+            new Addressee() {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
         },
-        AddresseeBCC = new List<Addressee>() {
-            new Recipient() {
+        AddresseesBCC = new List<Addressee>() {
+            new Addressee() {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
@@ -105,6 +105,55 @@ var mail = new Mail();
     };
 
     _ = mail.SendMail(email);
+
+
+/// <summary>
+/// Function for sending e-mails through SMTP Relay
+/// </summary>
+
+
+var mail = new Mail();
+
+    var email = new EmailHost()
+    {
+        Host = "Server",
+        IsSSL = "true or false",
+        Port = "Default communication port 25",
+        Addressees = new List<Addressee>() {
+            new Addressee() {
+                ShowName = "ShowName",
+                Mail = "correo@demo.com",
+            }
+        },
+        AddresseesCC = new List<Receiver>() {
+            new Addressee() {
+                ShowName = "ShowName",
+                Mail = "correo@demo.com",
+            }
+        },
+        AddresseesBCC = new List<Addressee>() {
+            new Addressee() {
+                ShowName = "ShowName",
+                Mail = "correo@demo.com",
+            }
+        },
+        BodyIsHtml = "true or false",
+        Body = "Read your HTML structure",
+        ScreenName = "Name to Display",
+        Title = "Title",
+        Attachments = new List<Attached>() {
+            new Attachments() {
+                file="Binary file",
+                name="Name",
+                MediaType="Media type" 
+            }
+        }
+        
+    };
+
+   _ = mail.SendMailbyHost(email);
+
+
 
 ```
 
@@ -156,6 +205,47 @@ Imports Jmcarrasc0.Mail.Sending
             }
         }
         Dim result = mail.SendMail(email)
+
+
+'Function for sending e-mails through SMTP Relay'
+
+
+        Dim mail = New Mail()
+        Dim email = New EmailHost() With {
+            .Host = "Server",
+            .IsSSL = "true or false",
+            .Port = "Default communication port 25",
+            .Recipients = New Recipient List(From Recipients)() From {
+                New Recipient() With {
+                    .ShowName = "Show Name",
+                    .Mail = "correo@demo.com"
+                }
+            },
+            .AddresseesCC = New List(Of Addressee)() From {
+                New Addressee() With {
+                    .ShowName = "ShowName",
+                    .Mail = "correo@demo.com"
+                }
+            },
+            .AddresseesBCC = New List(Of Addressee)() From {
+                New Addressee() With {
+                    .ShowName = "ShowName",
+                    .Mail = "correo@demo.com"
+                }
+            },
+            .BodyIsHtml = "true or false",
+            .Body = "Read your HTML structure",
+            .ScreenName = "Name to Display",
+            .Title = "Title",
+            .Attachments = New List(Of Attached)() From {
+                New Attachment() With {
+                    .file = "Binary File",
+                    .name = "Name",
+                    .MediaType = "Media Type"
+                }
+            }
+        }
+        Dim result = mail.SendMailbyHost(email)
         
 ```
 
@@ -169,7 +259,6 @@ Imports Jmcarrasc0.Mail.Sending
 - .NET 6
 - .NET 5
 - .NET Core 3.1
-- .NET Framework 4.8
 
 
 <br>
