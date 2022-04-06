@@ -12,7 +12,7 @@ Mail.Sending is constantly in development! Try it out now:
 ### NuGet
 
 ```sh
-PM> Install-Package Jmcarrasc0.Mail.Sending -Version 1.1.0
+PM> Install-Package Jmcarrasc0.Mail.Sending -Version 1.1.1
 ```
 
 **or**
@@ -20,34 +20,34 @@ PM> Install-Package Jmcarrasc0.Mail.Sending -Version 1.1.0
 ### .NET CLI
 
 ```sh
-> dotnet add package Jmcarrasc0.Mail.Sending --version 1.1.0
+> dotnet add package Jmcarrasc0.Mail.Sending --version 1.1.1
 ```
 
 ### PackageReference
 
 ```sh
-<PackageReference Include="Jmcarrasc0.Mail.Sending" Version="1.1.0" />
+<PackageReference Include="Jmcarrasc0.Mail.Sending" Version="1.1.1" />
 ```
 ### Paket CLI
 
 ```sh
-> paket add Jmcarrasc0.Mail.Sending --version 1.1.0
+> paket add Jmcarrasc0.Mail.Sending --version 1.1.1
 ```
 
 ### Script & Interactive
 
 ```sh
-> #r "nuget: Jmcarrasc0.Mail.Sending, 1.1.0"
+> #r "nuget: Jmcarrasc0.Mail.Sending, 1.1.1"
 ```
 
 ### Cake
 
 ```sh
 // Install Jmcarrasc0.Mail.Sending as a Cake Addin
-#addin nuget:?package=Jmcarrasc0.Mail.Sending&version=1.1.0
+#addin nuget:?package=Jmcarrasc0.Mail.Sending&version=1.1.1
 
 // Install Jmcarrasc0.Mail.Sending as a Cake Tool
-#tool nuget:?package=Jmcarrasc0.Mail.Sending&version=1.1.0
+#tool nuget:?package=Jmcarrasc0.Mail.Sending&version=1.1.1
 ```
 
 <br>
@@ -73,19 +73,19 @@ var mail = new Mail();
         IsSSL = "true or false",
         Port = "Default communication port 25",
         Addressees = new List<Addressee>() {
-            new Addressee() {
+            new Addressee {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
         },
-        AddresseesCC = new List<Receiver>() {
-            new Addressee() {
+        AddresseesCC = new List<Addressee>() {
+            new Addressee {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
         },
         AddresseesBCC = new List<Addressee>() {
-            new Addressee() {
+            new Addressee {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
@@ -95,7 +95,7 @@ var mail = new Mail();
         ScreenName = "Name to Display",
         Title = "Title",
         Attachments = new List<Attached>() {
-            new Attachments() {
+            new Attachments {
                 file="Binary file",
                 name="Name",
                 MediaType="Media type" 
@@ -118,21 +118,22 @@ var mail = new Mail();
     {
         Host = "Server",
         IsSSL = "true or false",
+        From= "From Email",
         Port = "Default communication port 25",
         Addressees = new List<Addressee>() {
-            new Addressee() {
+            new Addressee {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
         },
         AddresseesCC = new List<Receiver>() {
-            new Addressee() {
+            new Addressee {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
         },
         AddresseesBCC = new List<Addressee>() {
-            new Addressee() {
+            new Addressee {
                 ShowName = "ShowName",
                 Mail = "correo@demo.com",
             }
@@ -142,7 +143,7 @@ var mail = new Mail();
         ScreenName = "Name to Display",
         Title = "Title",
         Attachments = new List<Attached>() {
-            new Attachments() {
+            new Attachments {
                 file="Binary file",
                 name="Name",
                 MediaType="Media type" 
