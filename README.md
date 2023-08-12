@@ -1,6 +1,6 @@
 # [Jmcarrasc0 - Mail.Sending](https://www.patreon.com/join/jmcarrasc0?)
 
-<a href="https://www.patreon.com/join/jmcarrasc0?"><img src="https://i.postimg.cc/hPcgmRWQ/jmcarrasc0-logo.png" alt="jmcarrasco logo" ></a>
+<a href="https://www.patreon.com/join/jmcarrasc0?"><img src="https://i.postimg.cc/pLVXsBVs/jmcarrasc0-new.png" alt="jmcarrasco logo" ></a>
 
 **Mail.Sending** is a nuget package based on **.NET** for sending mail through an Smtp server with the SMTP Relay function or with user and password authentication..
 
@@ -12,7 +12,7 @@ Mail.Sending is constantly in development! Try it out now:
 ### NuGet
 
 ```sh
-PM> Install-Package Jmcarrasc0.Mail.Sending -Version 1.1.1
+PM> Install-Package Jmcarrasc0.Mail.Sending -Version 2.0.1
 ```
 
 **or**
@@ -20,34 +20,34 @@ PM> Install-Package Jmcarrasc0.Mail.Sending -Version 1.1.1
 ### .NET CLI
 
 ```sh
-> dotnet add package Jmcarrasc0.Mail.Sending --version 1.1.1
+> dotnet add package Jmcarrasc0.Mail.Sending --version 2.0.1
 ```
 
 ### PackageReference
 
 ```sh
-<PackageReference Include="Jmcarrasc0.Mail.Sending" Version="1.1.1" />
+<PackageReference Include="Jmcarrasc0.Mail.Sending" Version="2.0.1" />
 ```
 ### Paket CLI
 
 ```sh
-> paket add Jmcarrasc0.Mail.Sending --version 1.1.1
+> paket add Jmcarrasc0.Mail.Sending --version 2.0.1
 ```
 
 ### Script & Interactive
 
 ```sh
-> #r "nuget: Jmcarrasc0.Mail.Sending, 1.1.1"
+> #r "nuget: Jmcarrasc0.Mail.Sending, 2.0.1"
 ```
 
 ### Cake
 
 ```sh
 // Install Jmcarrasc0.Mail.Sending as a Cake Addin
-#addin nuget:?package=Jmcarrasc0.Mail.Sending&version=1.1.1
+#addin nuget:?package=Jmcarrasc0.Mail.Sending&version=2.0.1
 
 // Install Jmcarrasc0.Mail.Sending as a Cake Tool
-#tool nuget:?package=Jmcarrasc0.Mail.Sending&version=1.1.1
+#tool nuget:?package=Jmcarrasc0.Mail.Sending&version=2.0.1
 ```
 
 <br>
@@ -257,17 +257,17 @@ Imports Jmcarrasc0.Mail.Sending
 
 **Mail.Sending** is a nuget package compatible with the following Frameworks
 
+- .NET 7
 - .NET 6
 - .NET 5
-- .NET Core 3.1
 
 
 <br>
 <br>
 
-
+ 
 
 
 ## Copyright and license ![Github](https://img.shields.io/github/license/jmcarrasc0/Mail.Sending)
 
-Code copyright 2022 Juan Carrasco. Code released under [the MIT license](https://github.com/jmcarrasc0/Mail.Sending/blob/master/LICENSE).
+Code copyright 2023 Juan Carrasco. Code released under [the MIT license](https://github.com/jmcarrasc0/Mail.Sending/blob/master/LICENSE).
