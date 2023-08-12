@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<RepositoryType>git</RepositoryType>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<PackageId>Jmcarrasc0.Mail.Sending</PackageId>
-		<Version>1.1.1</Version>
+		<Version>2.0.1</Version>
 		<Authors>Juan Carrasco</Authors>
 		<Company>Jmcarrasc0</Company>
 		<Description>Package for mailing, including with copy, blind copy, files and html body
@@ -22,8 +22,8 @@ Paquete para el envio de correos, incluye con copia, copia oculta, archivos y cu
 		<PackageIcon>logonuget.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>Mail, Correo, MailSending, Services, Mail Relay, Mail SMTP, Relay, SMPT, Email, Email Host, Email Relay</PackageTags>
-		<AssemblyVersion>1.1.1</AssemblyVersion>
-		<FileVersion>1.1.1</FileVersion>
+		<AssemblyVersion>2.0.1</AssemblyVersion>
+		<FileVersion>2.0.1</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
