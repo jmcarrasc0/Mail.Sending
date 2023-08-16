@@ -7,7 +7,7 @@
 		<RepositoryType>git</RepositoryType>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<PackageId>Jmcarrasc0.Mail.Sending</PackageId>
-		<Version>2.0.1</Version>
+		<Version>2023.3.3.2</Version>
 		<Authors>Juan Carrasco</Authors>
 		<Company>Jmcarrasc0</Company>
 		<Description>Package for mailing, including with copy, blind copy, files and html body
@@ -16,14 +16,16 @@ Paquete para el envio de correos, incluye con copia, copia oculta, archivos y cu
 		<Copyright>jmcarrasc0 All rights reserved.</Copyright>
 		<PackageProjectUrl>https://github.com/jmcarrasc0/Mail.Sending</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jmcarrasc0/Mail.Sending</RepositoryUrl>
-		<PackageReleaseNotes>Minor operational improvements</PackageReleaseNotes>
+		<PackageReleaseNotes>Nueva version basada en Mailkit para el envio de las mas recientes tecnologias mediante smtp relay
+Se aplica la nueva nomeclatura de versionamiento 
+Año | Trimestre | Mayor | Parche </PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<ApplicationIcon>logonuget.ico</ApplicationIcon>
 		<PackageIcon>logonuget.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>Mail, Correo, MailSending, Services, Mail Relay, Mail SMTP, Relay, SMPT, Email, Email Host, Email Relay</PackageTags>
-		<AssemblyVersion>2.0.1</AssemblyVersion>
-		<FileVersion>2.0.1</FileVersion>
+		<AssemblyVersion>2023.3.3.2</AssemblyVersion>
+		<FileVersion>2023.3.3.2</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -35,9 +37,13 @@ Paquete para el envio de correos, incluye con copia, copia oculta, archivos y cu
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
-	  <None Include="C:\Users\j_mca\Pictures\jmcarrasc0\logonuget.png">
+	  <None Include="D:\OneDrive\Visual Studio\Personal\Jmcarrasc0.Mail.Sending\Jmcarrasc0.Mail.Sending\logonuget.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="MailKit" Version="4.1.0" />
 	</ItemGroup>
 </Project>
