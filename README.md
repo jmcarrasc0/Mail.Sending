@@ -12,7 +12,7 @@ Mail.Sending is constantly in development! Try it out now:
 ### NuGet
 
 ```sh
-PM> Install-Package Jmcarrasc0.Mail.Sending -Version 2.0.1
+PM> Install-Package Jmcarrasc0.Mail.Sending -Version 2023.3.3.2
 ```
 
 **or**
@@ -20,34 +20,34 @@ PM> Install-Package Jmcarrasc0.Mail.Sending -Version 2.0.1
 ### .NET CLI
 
 ```sh
-> dotnet add package Jmcarrasc0.Mail.Sending --version 2.0.1
+> dotnet add package Jmcarrasc0.Mail.Sending --version 2023.3.3.2
 ```
 
 ### PackageReference
 
 ```sh
-<PackageReference Include="Jmcarrasc0.Mail.Sending" Version="2.0.1" />
+<PackageReference Include="Jmcarrasc0.Mail.Sending" Version="2023.3.3.2" />
 ```
 ### Paket CLI
 
 ```sh
-> paket add Jmcarrasc0.Mail.Sending --version 2.0.1
+> paket add Jmcarrasc0.Mail.Sending --version 2023.3.3.2
 ```
 
 ### Script & Interactive
 
 ```sh
-> #r "nuget: Jmcarrasc0.Mail.Sending, 2.0.1"
+> #r "nuget: Jmcarrasc0.Mail.Sending, 2023.3.3.2"
 ```
 
 ### Cake
 
 ```sh
 // Install Jmcarrasc0.Mail.Sending as a Cake Addin
-#addin nuget:?package=Jmcarrasc0.Mail.Sending&version=2.0.1
+#addin nuget:?package=Jmcarrasc0.Mail.Sending&version=2023.3.3.2
 
 // Install Jmcarrasc0.Mail.Sending as a Cake Tool
-#tool nuget:?package=Jmcarrasc0.Mail.Sending&version=2.0.1
+#tool nuget:?package=Jmcarrasc0.Mail.Sending&version=2023.3.3.2
 ```
 
 <br>

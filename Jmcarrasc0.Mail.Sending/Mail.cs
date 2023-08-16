@@ -1,5 +1,6 @@
-﻿using System.Net;
-using System.Net.Mail;
+﻿using MailKit.Net.Smtp;
+using MailKit;
+using MimeKit;
 
 namespace Jmcarrasc0.Mail.Sending
 {
@@ -69,6 +70,7 @@ namespace Jmcarrasc0.Mail.Sending
 
     }
 
+
     public class Mail
     {
         public bool SendMail(Email mail)
@@ -77,39 +79,25 @@ namespace Jmcarrasc0.Mail.Sending
             try
             {
 
+                var email = new MimeMessage();
 
-                SmtpClient server = new SmtpClient(mail.MailServer)
+                email.From.Add(new MailboxAddress($"{mail.ScreenName}", $"{mail.Account}"));
+                email.Subject = mail.Title;
+                email.Body = new TextPart(MimeKit.Text.TextFormat.Html)
                 {
-
-                    Port = mail.Port,
-                    EnableSsl = mail.IsSSL,
-                    Credentials = new NetworkCredential(mail.Account, mail.Password)
-
-
+                    Text = $"{mail.Body}"
                 };
-
-                var mssg = new MailMessage
-                {
-                    Subject = mail.Title,
-                    From = new MailAddress(mail.Account, mail.ScreenName),
-                    IsBodyHtml = mail.BodyIsHtml,
-                    Body = mail.Body
-
-                };
-
-
 
                 foreach (var to in mail.Addressees)
                 {
-                    mssg.To.Add(new MailAddress(to.Mail, to.ShowName));
+                    email.To.Add(new MailboxAddress($"{to.ShowName}", $"{to.Mail}"));
                 }
-
 
                 if (mail.AddresseesCC != null)
                 {
                     foreach (var cc in mail.AddresseesCC)
                     {
-                        mssg.CC.Add(new MailAddress(cc.Mail, cc.ShowName));
+                        email.Cc.Add(new MailboxAddress(cc.Mail, cc.ShowName));
                     }
                 }
 
@@ -118,24 +106,26 @@ namespace Jmcarrasc0.Mail.Sending
 
                     foreach (var bcc in mail.AddresseesBCC)
                     {
-                        mssg.Bcc.Add(new MailAddress(bcc.Mail, bcc.ShowName));
+                        email.Bcc.Add(new MailboxAddress(bcc.Mail, bcc.ShowName));
                     }
 
                 }
 
-                if (mail.Attachments!= null)
+
+                using (var smtp = new MailKit.Net.Smtp.SmtpClient())
                 {
-                    foreach (var files in mail.Attachments)
-                    {
-                        var ms = new MemoryStream(files.file);
-                        mssg.Attachments.Add(new Attachment(ms, files.name, files.MediaType));
-                    }
+                    smtp.Connect(mail.MailServer, mail.Port,mail.IsSSL);
+
+                    // Note: only needed if the SMTP server requires authentication
+                    smtp.Authenticate(mail.Account, mail.Password);
+
+                    smtp.Send(email);
+                    return true;
+                    smtp.Disconnect(true);
+
+
                 }
 
-
-                /* Send*/
-                server.Send(mssg);
-                return true;
 
             }
             catch (Exception ex)
@@ -148,77 +138,7 @@ namespace Jmcarrasc0.Mail.Sending
         }
 
 
-        public bool SendMailbyHost(EmailHost mail)
-        {
-            try
-            {
-
-                SmtpClient server = new SmtpClient()
-                {
-                    Host = mail.Host,
-                    Port = mail.Port,
-                    EnableSsl = mail.IsSSL,
-                };
-
-
-                var mssg = new MailMessage
-                {
-                    Subject = mail.Title,
-                    From = new MailAddress(mail.From, mail.ScreenName),
-                    Body = mail.Body,
-                    IsBodyHtml = mail.BodyIsHtml
-
-                };
-
-
-
-                foreach (var to in mail.Addressees)
-                {
-                    mssg.To.Add(new MailAddress(to.Mail, to.ShowName));
-                }
-
-
-                if (mail.AddresseesCC != null)
-                {
-                    foreach (var cc in mail.AddresseesCC)
-                    {
-                        mssg.CC.Add(new MailAddress(cc.Mail, cc.ShowName));
-                    }
-                }
-
-                if (mail.AddresseesBCC != null)
-                {
-
-                    foreach (var bcc in mail.AddresseesBCC)
-                    {
-                        mssg.Bcc.Add(new MailAddress(bcc.Mail, bcc.ShowName));
-                    }
-
-                }
-
-                if (mail.Attachments != null)
-                {
-                    foreach (var files in mail.Attachments)
-                    {
-                        var ms = new MemoryStream(files.file);
-                        mssg.Attachments.Add(new Attachment(ms, files.name, files.MediaType));
-                    }
-                }
-
-
-                /* Enviar */
-                server.Send(mssg);
-                return true;
-
-            }
-            catch (Exception ex)
-            {
-
-                var argEx = new ArgumentException("A problem occurred while sending mail", ex);
-                throw argEx;
-            }
-
-        }
+      
     }
 
 }
